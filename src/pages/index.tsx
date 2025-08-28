@@ -2,8 +2,10 @@
 
 import { GetServerSideProps, NextPage } from "next";
 import { useRef } from "react";
-import axios from "axios";
 import { Box } from "@mui/material";
+
+// Importa o cliente Supabase
+import { createClient } from "@supabase/supabase-js";
 
 import { Project } from "@/types/projects";
 import MainLayout from "@/components/layout/MainLayout";
@@ -16,20 +18,10 @@ interface HomePageProps {
   projects: Project[];
 }
 
-// Estilos de Glassmorphism para o painel
-const glassmorphismStyles = {
-  backgroundColor: "rgba(255, 255, 255, 0.1)",
-  backdropFilter: "blur(12px) saturate(180%)",
-  WebkitBackdropFilter: "blur(12px) saturate(180%)",
-  border: "1px solid rgba(255, 255, 255, 0.125)",
-  boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.2)",
-};
-
 const Home: NextPage<HomePageProps> = ({ projects }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   return (
     <MainLayout>
-      {/* Este é o painel de vidro principal */}
       <Box
         ref={scrollContainerRef}
         sx={{
@@ -39,7 +31,6 @@ const Home: NextPage<HomePageProps> = ({ projects }) => {
           borderRadius: { xs: 0, lg: "16px" },
         }}
       >
-        {/* Container para as seções, com padding interno */}
         <Box
           component="main"
           sx={{
@@ -62,21 +53,39 @@ const Home: NextPage<HomePageProps> = ({ projects }) => {
 
 export default Home;
 
-// A função getServerSideProps permanece a mesma
+// Função getServerSideProps atualizada para Supabase
 export const getServerSideProps: GetServerSideProps<
   HomePageProps
 > = async () => {
-  try {
-    const API_URL =
-      process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/projects";
-    const response = await axios.get<Project[]>(API_URL);
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    console.error("Variáveis de ambiente do Supabase não estão configuradas.");
     return {
       props: {
-        projects: response.data,
+        projects: [],
+      },
+    };
+  }
+
+  try {
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    const { data: projects, error } = await supabase
+      .from("projects")
+      .select("*");
+
+    if (error) {
+      throw error;
+    }
+
+    return {
+      props: {
+        projects: (projects as Project[]) || [],
       },
     };
   } catch (error) {
-    console.error("Falha ao buscar projetos:", error);
+    console.error("Falha ao buscar projetos do Supabase:", error);
     return {
       props: {
         projects: [],
