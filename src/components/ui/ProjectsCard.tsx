@@ -1,5 +1,3 @@
-// components/ui/ProjectCard.tsx
-
 import { Box, Typography, Chip, IconButton } from "@mui/material";
 import { motion } from "framer-motion";
 import { Project } from "@/types/projects";
@@ -26,7 +24,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       variants={cardVariants}
       whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.2 } }}
       sx={{
-        // Estilos do Glassmorphism
         backgroundColor: "rgba(255, 255, 255, 0.1)",
         backdropFilter: "blur(10px) saturate(150%)",
         WebkitBackdropFilter: "blur(10px) saturate(150%)",
@@ -45,7 +42,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           position: "relative",
           width: "100%",
           height: "180px",
-          backgroundColor: "#333" /* Cor de fundo para o placeholder */,
+          backgroundColor: "#333",
         }}
       >
         {project.imageUrl ? (

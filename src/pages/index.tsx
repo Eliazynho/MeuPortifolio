@@ -70,7 +70,7 @@ export const getServerSideProps: GetServerSideProps<
   try {
     const supabase = createClient(supabaseUrl, supabaseAnonKey);
     const { data: projects, error } = await supabase
-      .from("projects")
+      .from("Project")
       .select("*");
 
     if (error) {

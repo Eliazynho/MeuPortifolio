@@ -51,9 +51,19 @@ const AboutSection = () => {
         >
           <Typography variant="body1" color="grey.300">
             Sou um Arquiteto de Soluções apaixonado por criar sistemas
-            escaláveis e eficientes. Com mais de X anos de experiência, meu foco
+            escaláveis e eficientes. Com mais de 2 anos de experiência, meu foco
             é transformar desafios complexos em tecnologia robusta e intuitiva,
             unindo a visão de negócio com a execução técnica.
+            <br />
+            <br />
+            Aprimorando meu conhecimento em arquitetura de soluções e
+            desenvolvimento de software, estou pronto para enfrentar novos
+            desafios e contribuir para projetos inovadores.
+            <br />
+            <br />
+            Estou sempre em busca de oportunidades para aprimorar minhas
+            habilidades e colaborar em projetos desafiadores. Se você quer
+            trabalhar comigo, sinta-se livre para entrar em contato.
           </Typography>
         </Box>
 
@@ -81,7 +91,6 @@ const AboutSection = () => {
               "Next.js",
               "Node.js",
               "Express.js",
-              "MongoDB",
               "MongoDB",
               "Prisma",
               "Nest.js",

@@ -1,9 +1,6 @@
-// components/layout/MainLayout.tsx
-
 import { ReactNode } from "react";
 import { Box } from "@mui/material";
 
-// Animações de keyframes para o fundo Aurora
 const keyframes = {
   "@keyframes move-aurora-1": {
     "0%": { transform: "translate(0, 0) rotate(0deg)" },
@@ -27,7 +24,6 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
         overflow: "hidden",
         ...keyframes,
         overflowY: { xs: "hidden", lg: "auto" },
-        // Estilização customizada da barra de scroll
         "&::-webkit-scrollbar": {
           width: "8px",
         },
@@ -42,13 +38,11 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
           backgroundColor: "rgba(255, 255, 255, 0.4)",
         },
 
-        // Adicionado para centralizar o conteúdo (o painel de vidro)
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         padding: { xs: 0, sm: 2, md: 4 },
 
-        // Efeitos de gradiente da aurora
         "&::before": {
           content: '""',
           position: "absolute",

@@ -63,7 +63,7 @@ const HeroSection = ({ scrollRef }: HeroSectionProps) => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        minHeight: "60vh", // Ocupa uma boa parte da tela inicial
+        minHeight: "60vh",
         color: "white",
       }}
     >
