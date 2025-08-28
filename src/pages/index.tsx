@@ -50,7 +50,7 @@ const Home: NextPage<HomePageProps> = ({ projects }) => {
     </MainLayout>
   );
 };
-
+// Exporta a função Home
 export default Home;
 export const getServerSideProps: GetServerSideProps<
   HomePageProps
