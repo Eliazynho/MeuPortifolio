@@ -52,8 +52,6 @@ const Home: NextPage<HomePageProps> = ({ projects }) => {
 };
 
 export default Home;
-
-// Função getServerSideProps atualizada para Supabase
 export const getServerSideProps: GetServerSideProps<
   HomePageProps
 > = async () => {
