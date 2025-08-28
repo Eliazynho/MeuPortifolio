@@ -1,40 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Portfólio Pessoal - Elias Santos
+<br>
 
-## Getting Started
+🚀 Sobre o Projeto
+Este projeto é o meu portfólio pessoal, uma aplicação web moderna desenvolvida para demonstrar minhas competências em arquitetura de soluções e desenvolvimento de software. A interface foi cuidadosamente projetada com foco em uma experiência de usuário fluida e um apelo visual sofisticado, empregando tendências como Glassmorphism e fundos animados.
 
-First, run the development server:
+A aplicação é totalmente desacoplada, consumindo dados de uma API externa e renderizando o conteúdo no lado do servidor (SSR) para otimização de performance e SEO.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 Veja ao vivo: https://www.canva.com/pt_br/criar/portfolios/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✨ Principais Features
+Design Responsivo e Adaptativo: A interface se transforma de um painel fixo com scroll interno em desktops para uma experiência de rolagem nativa e de borda a borda em dispositivos móveis.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Animações e Micro-interações: Construído com Framer Motion para criar uma navegação suave, transições elegantes e feedback visual interativo.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Performance Otimizada: Utiliza Server-Side Rendering (SSR) do Next.js para um carregamento inicial rápido e eficiente.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Tematização Centralizada: O design system é gerenciado por um tema customizado no Material-UI, garantindo consistência visual e manutenção simplificada.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Consumo de API Externa: Os dados dos projetos são buscados dinamicamente de um backend, tornando o conteúdo do portfólio facilmente gerenciável.
 
-## Learn More
+🛠️ Tecnologias e Conceitos Aplicados
+Este portfólio foi construído utilizando um stack tecnológico moderno e robusto, refletindo práticas atuais de desenvolvimento web.
 
-To learn more about Next.js, take a look at the following resources:
+Frontend
+Next.js: Utilizado como framework React para gerenciar a renderização (SSR), roteamento e otimizações de build.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+TypeScript: Garante a tipagem estática do código, resultando em um desenvolvimento mais seguro e escalável.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Material-UI (MUI): Empregado para a base de componentes de UI e para a criação de um sistema de design customizado através de sua API de tematização. A estilização é feita com a prop sx.
 
-## Deploy on Vercel
+Framer Motion: Biblioteca escolhida para a implementação de animações declarativas e complexas, trazendo vida à interface.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Axios: Utilizado como cliente HTTP para realizar as chamadas à API de projetos de forma assíncrona.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Arquitetura e Backend (Conceitual)
+O frontend opera de forma desacoplada de um backend que serve os dados via uma API RESTful.
+
+A fonte de dados original é um banco de dados PostgreSQL, cujo esquema é gerenciado pelo ORM Prisma, garantindo a integridade e o versionamento da base de dados.
+
+📄 Licença
+Distribuído sob a licença MIT.
+
+📬 Contato
+Elias Santos
+
+LinkedIn: [www.linkedin.com/in/elias-santos-67b5601b7]
+
+Email: m10elias10@gmail.com
+
+GitHub: [www.github.com/Eliazynho]
