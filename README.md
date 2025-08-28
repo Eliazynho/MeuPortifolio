@@ -6,7 +6,7 @@ Este projeto é o meu portfólio pessoal, uma aplicação web moderna desenvolvi
 
 A aplicação é totalmente desacoplada, consumindo dados de uma API externa e renderizando o conteúdo no lado do servidor (SSR) para otimização de performance e SEO.
 
-🔗 Veja ao vivo: https://www.canva.com/pt_br/criar/portfolios/
+🔗 Veja ao vivo: [PORTFÓLIO](https://meu-portifolio-ten-psi.vercel.app/)
 
 ✨ Principais Features
 Design Responsivo e Adaptativo: A interface se transforma de um painel fixo com scroll interno em desktops para uma experiência de rolagem nativa e de borda a borda em dispositivos móveis.
